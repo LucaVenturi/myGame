@@ -12,6 +12,11 @@ public class Vector2D {
         this.y = y;
     }
 
+    public Vector2D(final Vector2D vector) {
+        this.x = vector.getX();
+        this.y = vector.getY();
+    }
+
     public double getX() {
         return this.x;
     }
@@ -36,7 +41,7 @@ public class Vector2D {
     public Vector2D multiplyByScalar(final double scalar) {
         return new Vector2D(this.x * scalar, this.y * scalar);
     }
-    
+
     @Override
     public String toString() {
         return "Vector2D [x=" + x + ", y=" + y + "]";
