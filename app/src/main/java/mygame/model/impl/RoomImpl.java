@@ -15,6 +15,10 @@ class RoomImpl implements Room{
         this.gameObjects = new ArrayList<>();
     }
 
+    public RoomImpl(final Room room) {
+        this.gameObjects = room.getAllGameObjects();
+    }
+
 	@Override
 	public void addGameObject(GameObject gameObject) {
         Objects.requireNonNull(gameObject);

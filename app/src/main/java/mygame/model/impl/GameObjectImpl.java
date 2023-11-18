@@ -11,6 +11,11 @@ public class GameObjectImpl implements GameObject{
     private Point2D position;
     private Vector2D vector;
 
+    public GameObjectImpl(Point2D position, Vector2D vector) {
+        this.position = position;
+        this.vector = vector;
+    }
+
     @Override
     public Point2D getPosition() {
         return new Point2D(this.position);
